@@ -52,7 +52,7 @@ public class VanillaMovieManager {
         try {
             PreparedStatement pst = getConnection().prepareStatement(insertSql);
 
-            pst.setInt(1, 3);
+            pst.setInt(1, 4);
             pst.setString(2, "Top Gun");
             pst.setString(3, "Tony Scott");
             pst.setString(4, "Maverick is a hot pilot. When he encounters "
