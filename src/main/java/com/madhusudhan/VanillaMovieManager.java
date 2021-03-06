@@ -15,8 +15,6 @@ public class VanillaMovieManager {
     private static Random r = new Random();
     private String username = "mkonda";
     private String password = "mypass";
-//    private String url = "jdbc:derby:memory:jh;create=true";
-//    private String driverClass = "org.apache.derby.jdbc.EmbeddedDriver";
     private String url = "jdbc:mysql://localhost:3306/jh";
     private String driverClass = "com.mysql.jdbc.Driver";
     private String tableSql = "create table movies (ID integer not null, TITLE varchar(255), DIRECTOR varchar(255), SYNOPSIS varchar(255), primary key (ID))";
@@ -54,7 +52,7 @@ public class VanillaMovieManager {
         try {
             PreparedStatement pst = getConnection().prepareStatement(insertSql);
 
-            pst.setInt(1, 2);
+            pst.setInt(1, 3);
             pst.setString(2, "Top Gun");
             pst.setString(3, "Tony Scott");
             pst.setString(4, "Maverick is a hot pilot. When he encounters "
