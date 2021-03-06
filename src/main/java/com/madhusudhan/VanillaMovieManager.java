@@ -54,29 +54,7 @@ public class VanillaMovieManager {
         try {
             PreparedStatement pst = getConnection().prepareStatement(insertSql);
 
-            pst.setInt(1, 1);
-            pst.setString(2, "Top Gun");
-            pst.setString(3, "Tony Scott");
-            pst.setString(4, "Maverick is a hot pilot. When he encounters "
-                    + "a pair of MiGs over the Persian Gulf,"
-                    + " his wingman is clearly outflown and freaks. "
-                    + "On almost no fuel, Maverick is able to talk "
-                    + "him back down to the Carrier..");
-
-            pst.execute();
-            System.out.println("Movie persisted successfully!");
-
-        } catch (SQLException ex) {
-            System.err.println(ex.getMessage());
-        }
-    }
-
-    
-    private void queryMovie() {
-        try {
-            PreparedStatement pst = getConnection().prepareStatement(insertSql);
-
-            pst.setInt(1, 1);
+            pst.setInt(1, 2);
             pst.setString(2, "Top Gun");
             pst.setString(3, "Tony Scott");
             pst.setString(4, "Maverick is a hot pilot. When he encounters "
